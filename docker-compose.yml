@@ -1,0 +1,33 @@
+version: '3'
+services:
+  orchestrator:
+    build: ./orchestrator
+    ports:
+      - "5000:5000"
+    networks:
+      - mynetwork
+
+  microservice1:
+    build: ./microservice1-UserManagement
+    ports:
+      - "5001:5001"
+    networks:
+      - mynetwork
+  
+  microservice2:
+    build: ./microservice2-OrderManagement
+    ports:
+      - "5002:5002"
+    networks:
+      - mynetwork
+  
+  microservice3:
+    build: ./microservice3-ProductManagement
+    ports:
+      - "5003:5003"
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
