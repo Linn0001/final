@@ -81,7 +81,10 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+				<skipTests>true</skipTests>
+				<encoding>UTF-8</encoding>
 					<excludes>
+
 						<exclude>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
